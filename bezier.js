@@ -49,11 +49,11 @@ function setup() {
 }
 
 function draw() {
-    bezier_func(1)
+    bezier_func()
     draw_text()
 }
 
-function bezier_func(l) {
+function bezier_func() {
     noFill()
     let random_weight = random([1, 1.5, 2, 3])
     strokeWeight(random_weight)
@@ -72,14 +72,14 @@ function bezier_func(l) {
     if (choice != 2) {
         for (let j = 0; j < steps; j++) {
 
-            x1 = (noise(offset + i) * width + j1) * l
-            y1 = (noise(offset + i + 2) * height + j1) * l
-            x2 = (noise(offset + i + 3) * width + j2) * l
-            y2 = (noise(offset + i + 4) * height + j2) * l
-            x3 = (noise(offset + i + 5) * width + j3) * l
-            y3 = (noise(offset + i + 6) * height + j3) * l
-            x4 = (noise(offset + i + 7) * width + j4) * l
-            y4 = (noise(offset + i + 8) * height + j4) * l
+            x1 = (noise(offset + i) * width + j1)
+            y1 = (noise(offset + i + 2) * height + j1)
+            x2 = (noise(offset + i + 3) * width + j2)
+            y2 = (noise(offset + i + 4) * height + j2)
+            x3 = (noise(offset + i + 5) * width + j3)
+            y3 = (noise(offset + i + 6) * height + j3)
+            x4 = (noise(offset + i + 7) * width + j4)
+            y4 = (noise(offset + i + 8) * height + j4)
 
             if (choice == 0) {
                 stroke(r1, b1, g1)
@@ -106,14 +106,14 @@ function bezier_func(l) {
     } else {
         for (let j = 0; j < steps; j++) {
             stroke(r1, g1, b1)
-            x1 = (noise(offset + i) * width + j1) * l
-            y1 = (noise(offset + i * 52) * height + j1) * l
-            x2 = (noise(offset + i * 53) * width + j2) * l - 100
-            y2 = (noise(offset + i * 54) * height + j2) * l - 100
-            x3 = (noise(offset + i * 55) * width + j3) * l + 100
-            y3 = (noise(offset + i * 56) * height + j3) * l + 100
-            x4 = (noise(offset + i * 57) * width + j4) * l
-            y4 = (noise(offset + i * 58) * height + j4) * l
+            x1 = (noise(offset + i) * width + j1)
+            y1 = (noise(offset + i * 52) * height + j1)
+            x2 = (noise(offset + i * 53) * width + j2) - 100
+            y2 = (noise(offset + i * 54) * height + j2) - 100
+            x3 = (noise(offset + i * 55) * width + j3) + 100
+            y3 = (noise(offset + i * 56) * height + j3) + 100
+            x4 = (noise(offset + i * 57) * width + j4)
+            y4 = (noise(offset + i * 58) * height + j4)
 
             bezier(x1, y1, x2, y2, x3, y3, x4, y4)
 
@@ -122,14 +122,14 @@ function bezier_func(l) {
         for (let j = 0; j < steps; j++) {
             stroke(r2, g2, b2)
             // stroke(0)
-            x1 = (noise(offset + i) * width + j1) * l - 150
-            y1 = (noise(offset + i * 2) * height + j1) * l + 150
-            x2 = (noise(offset + i * 3) * width + j2) * l
-            y2 = (noise(offset + i * 4) * height + j2) * l
-            x3 = (noise(offset + i * 5) * width + j3) * l
-            y3 = (noise(offset + i * 6) * height + j3) * l
-            x4 = (noise(offset + i * 7) * width + j4) * l + 150
-            y4 = (noise(offset + i * 8) * height + j4) * l + 150
+            x1 = (noise(offset + i) * width + j1) - 150
+            y1 = (noise(offset + i * 2) * height + j1) + 150
+            x2 = (noise(offset + i * 3) * width + j2)
+            y2 = (noise(offset + i * 4) * height + j2)
+            x3 = (noise(offset + i * 5) * width + j3)
+            y3 = (noise(offset + i * 6) * height + j3)
+            x4 = (noise(offset + i * 7) * width + j4) + 150
+            y4 = (noise(offset + i * 8) * height + j4) + 150
 
             bezier(x1, y1, x2, y2, x3, y3, x4, y4)
             offset += speed
@@ -145,14 +145,14 @@ function draw_text() {
     for (let j = 0; j < steps; j++) {
 
         stroke(r1, g1, b1)
-        x1 = (noise(offset + i) * width + j1) * l
-        y1 = (noise(offset + i + 2) * height + j1) * l
-        x2 = (noise(offset + i + 3) * width + j2) * l
-        y2 = (noise(offset + i + 4) * height + j2) * l
-        x3 = (noise(offset + i + 5) * width + j3) * l
-        y3 = (noise(offset + i + 6) * height + j3) * l
-        x4 = (noise(offset + i + 7) * width + j4) * l
-        y4 = (noise(offset + i + 8) * height + j4) * l
+        x1 = (noise(offset + i) * width + j1)
+        y1 = (noise(offset + i + 2) * height + j1)
+        x2 = (noise(offset + i + 3) * width + j2)
+        y2 = (noise(offset + i + 4) * height + j2)
+        x3 = (noise(offset + i + 5) * width + j3)
+        y3 = (noise(offset + i + 6) * height + j3)
+        x4 = (noise(offset + i + 7) * width + j4)
+        y4 = (noise(offset + i + 8) * height + j4)
 
         bezier(x1, y1, x2, y2, x3, y3, x4, y4)
 
