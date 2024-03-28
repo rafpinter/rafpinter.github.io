@@ -55,7 +55,7 @@ function draw() {
 
 function bezier_func() {
     noFill()
-    let random_weight = random([1, 1.5, 2, 3])
+    let random_weight = random([1, 1.5, 2])
     strokeWeight(random_weight)
     background(0)
 
