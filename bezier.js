@@ -30,7 +30,7 @@ let j2 = -100
 let j3 = 100
 let j4 = 100
 
-let steps = 200
+let steps
 
 function setup() {
 
@@ -65,6 +65,7 @@ function bezier_func(l) {
     let b1 = random(0, 255)
     let b2 = random(0, 255)
     speed = random(0.003, 0.006)
+    steps = random(50, 250)
     if (choice != 2) {
         for (let j = 0; j < steps; j++) {
 
