@@ -55,8 +55,10 @@ function draw() {
 
 function bezier_func(l) {
     noFill()
-    strokeWeight(1.5)
+    let random_weight = random([1, 1.5, 2, 3])
+    strokeWeight(random_weight)
     background(0)
+
     let choice = random([0, 1, 2])
     let r1 = random(0, 255)
     let r2 = random(0, 255)
@@ -64,8 +66,9 @@ function bezier_func(l) {
     let g2 = random(0, 255)
     let b1 = random(0, 255)
     let b2 = random(0, 255)
-    speed = random(0.003, 0.006)
+    speed = random(0.003, 0.007)
     steps = random(50, 250)
+
     if (choice != 2) {
         for (let j = 0; j < steps; j++) {
 
